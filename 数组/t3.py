@@ -10,9 +10,6 @@ nums 的其余元素与 nums 的大小不重要。
 返回 k 。
 """
 
-
-
-
 class Solution:
     @staticmethod
     def remove_duplicates(nums: list[int]) -> int:
@@ -22,3 +19,6 @@ class Solution:
                 nums[k] = nums[i]
                 k += 1
         return k
+
+# 没思路，要复习2025.10.1
+# 没注意到是非严格递增的数组，说明已经有顺序了。
