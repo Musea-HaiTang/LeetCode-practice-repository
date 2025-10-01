@@ -9,7 +9,8 @@
 返回 k。
 """
 class Solution:
-    def removeElement(self, nums: list[int], val: int) -> int:
+    @staticmethod
+    def remove_element(nums: list[int], val: int) -> int:
         i = 0
         for j in nums:
             if j != val:
