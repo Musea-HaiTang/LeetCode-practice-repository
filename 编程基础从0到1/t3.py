@@ -13,6 +13,12 @@ class Solution:
                 return i
         return -1
 
+
+    # 使用python内置的find方法,和上面的方法一模一样
+    @staticmethod
+    def strStr2(haystack: str, needle: str) -> int:
+        return haystack.find(needle)
+
 # 匹配字符串，这个还是很实用的
 # 还有更高效的方法：KMP算法
 # 2025.10.4
