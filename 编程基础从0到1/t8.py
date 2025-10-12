@@ -19,9 +19,10 @@ class Solution:
         arr.sort()# 排序
 
         for x in range(1,len(arr) - 1):
-            if arr[x] * 2 != arr[x+1] + arr[x+1]:
+            if arr[x] * 2 != arr[x-1] + arr[x+1]:
                 return False
         return True
 # 排序算法，数组.sort()
 # 冒泡排序，时间复杂度 O(n^2)
 # 2025.10.12
+# 复习一次。2025.10.12
