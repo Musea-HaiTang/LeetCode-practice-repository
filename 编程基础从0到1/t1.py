@@ -24,3 +24,4 @@ class Solution:
 
 # 要熟悉list的基本函数，如append, join
 # 2025.10.2
+# 复习一次。2025.10.12

@@ -29,4 +29,4 @@ class Solution:
                 nums[left], nums[right] = nums[right], nums[left]   # 交换非零元素到左边去，一个一个填满
                 left += 1
             right += 1
-
+# 复习一次。2025.10.12
