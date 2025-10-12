@@ -13,10 +13,10 @@ class Solution:
                 nums[left] = nums[right]  # 将非零元素移动到left位置
                 left += 1
 
-        # 第二遍遍历：将剩余位置填充为0
-        while left < len(nums):
-            nums[left] = 0
-            left += 1
+        # 第二遍遍历：将剩余位置填充为0 (使用切片赋值提高效率)
+        for i in range(left, len(nums)):
+            nums[i] = 0
+
 
 
 
