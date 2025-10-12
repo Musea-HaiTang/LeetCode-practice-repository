@@ -44,3 +44,6 @@ class Solution:
             else:
                 ans += value
         return ans
+# 罗马数字转换，关键在于将罗马数字对应转换成数字，并且注意特殊规则
+# enumerate函数可以同时返回索引和值，先返回索引，再返回值
+# 2025.10.12
