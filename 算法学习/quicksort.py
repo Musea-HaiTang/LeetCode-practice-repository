@@ -1,12 +1,20 @@
+import random
+
+
 def swap(arr, i, j):
     """交换数组中的两个元素"""
     arr[i], arr[j] = arr[j], arr[i]
 
 
 def partition(arr, p, r):
-    x = arr[p]  # 选第一个元素当"组长"（基准值）
-    i = p  # 左指针（从左边开始）
-    j = r + 1  # 右指针（从右边开始）
+    """分区函数 - 随机选择基准值"""
+    # 随机选择基准值（避免最坏情况）
+    rand_index = random.randint(p, r)  # 随机选一个糖果当组长
+    swap(arr, p, rand_index)  # 把随机选的组长换到第一个位置
+
+    x = arr[p]  # 基准值（组长）
+    i = p  # 左指针
+    j = r + 1  # 右指针
 
     while True:
         # 左指针向右移动：找比组长大的糖果
@@ -32,6 +40,7 @@ def partition(arr, p, r):
 
 
 def quick_sort(arr, p, r):
+    """快速排序主函数"""
     if p < r:  # 还有糖果需要排序
         q = partition(arr, p, r)  # 分区，q是组长位置
         quick_sort(arr, p, q - 1)  # 排序左边小糖果
@@ -44,5 +53,3 @@ if __name__ == "__main__":
     print("原始数组:", data)
     quick_sort(data, 0, len(data) - 1)
     print("排序后数组:", data)
-
-
